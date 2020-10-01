@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'MMAppVersionTracker'
-  spec.version      = '0.1.0'
+  spec.version      = '0.1.2'
   
   spec.authors      = { 'mir-taqi' => 'taqi1435@gmail.com' }
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
