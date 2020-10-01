@@ -18,12 +18,12 @@ enum CustomError: Error {
    case invalidAppName
 }
 
-class MMAppVersionTracker: NSObject {
+public class MMAppVersionTracker: NSObject {
     public static let shared = MMAppVersionTracker()
 
     var langCode = "en"
     
-    func checkAppStoreVersion(isForceUpdate: Bool, languageCode : String) {
+    public func checkAppStoreVersion(isForceUpdate: Bool, languageCode : String) {
         self.langCode = languageCode
         do {
             //Get Bundle Identifire from Info.plist
@@ -84,7 +84,7 @@ class MMAppVersionTracker: NSObject {
         }
     }
     
-    func showUpdateAlert(message : String, appStoreURL: String, isForceUpdate: Bool) {
+    public func showUpdateAlert(message : String, appStoreURL: String, isForceUpdate: Bool) {
         
         let controller = UIAlertController(title: langCode == "ar" ? "يوجد تحديث" : "New Version", message: message, preferredStyle: .alert)
         

@@ -9,7 +9,7 @@
 import Foundation
 
 
-class ItunesAppInfo : NSObject, NSCoding{
+public class ItunesAppInfo : NSObject, NSCoding{
 
     var resultCount : Int!
     var results : [AppInfoUpshot]!
@@ -52,7 +52,7 @@ class ItunesAppInfo : NSObject, NSCoding{
      * NSCoding required initializer.
      * Fills the data from the passed decoder
      */
-    @objc required init(coder aDecoder: NSCoder)
+    @objc required public init(coder aDecoder: NSCoder)
     {
         resultCount = aDecoder.decodeObject(forKey: "resultCount") as? Int
         results = aDecoder.decodeObject(forKey: "results") as? [AppInfoUpshot]
@@ -62,7 +62,7 @@ class ItunesAppInfo : NSObject, NSCoding{
      * NSCoding required method.
      * Encodes mode properties into the decoder
      */
-    @objc func encode(with aCoder: NSCoder)
+    @objc public func encode(with aCoder: NSCoder)
     {
         if resultCount != nil{
             aCoder.encode(resultCount, forKey: "resultCount")
@@ -74,7 +74,7 @@ class ItunesAppInfo : NSObject, NSCoding{
 }
 
 
-class AppInfoUpshot : NSObject, NSCoding{
+public class AppInfoUpshot : NSObject, NSCoding{
 
     var advisories : [AnyObject]!
     var appletvScreenshotUrls : [AnyObject]!
@@ -256,7 +256,7 @@ class AppInfoUpshot : NSObject, NSCoding{
      * NSCoding required initializer.
      * Fills the data from the passed decoder
      */
-    @objc required init(coder aDecoder: NSCoder)
+    @objc required public init(coder aDecoder: NSCoder)
     {
         advisories = aDecoder.decodeObject(forKey: "advisories") as? [AnyObject]
         appletvScreenshotUrls = aDecoder.decodeObject(forKey: "appletvScreenshotUrls") as? [AnyObject]
@@ -303,7 +303,7 @@ class AppInfoUpshot : NSObject, NSCoding{
      * NSCoding required method.
      * Encodes mode properties into the decoder
      */
-    @objc func encode(with aCoder: NSCoder)
+    @objc public func encode(with aCoder: NSCoder)
     {
         if advisories != nil{
             aCoder.encode(advisories, forKey: "advisories")
