@@ -2,9 +2,6 @@ Pod::Spec.new do |spec|
   spec.name         = 'MMAppVersionTracker'
   spec.version      = '0.1.0'
   
- s.description      = <<-DESC
-"A very useful and convenient library that tracks App version available on the AppStore so as to prompt user for the updated version."
-                       DESC
   spec.authors      = { 'mir-taqi' => 'taqi1435@gmail.com' }
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage     = 'https://github.com/mir-taqi/MMAppVersionTracker'
